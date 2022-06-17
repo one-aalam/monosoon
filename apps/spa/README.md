@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Create React App - SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and acts as reference implementation for all the React based SPAs. When creating a new app you can duplicate this entire folder or create a new app at `/apps` and make changes as available in this repository
 
 ## Available Scripts
 

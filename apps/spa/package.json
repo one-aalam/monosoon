@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "craco start",
+    "build": "craco build",
     "lint": "eslint src/**/*.ts*",
-    "test": "react-scripts test",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@craco/craco": "^6.4.3",
     "eslint": "^8.17.0",
     "eslint-config-custom": "*",
     "tsconfig": "*"
