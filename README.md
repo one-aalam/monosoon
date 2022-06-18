@@ -7,9 +7,14 @@ MonoSoon is a [turborepo](https://turborepo.org/) based monorepo starter kit for
 
 This repo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager. It includes the following packages/apps:
 
-### Apps and Packages
+### Apps
+- `spa`: a simple [CRA](https://create-react-app.dev/) app
+- `spa-host`: a [CRA](https://create-react-app.dev/) based **micro front-end**, that leverages component code from `spa-guest-one` and `spa-guest-two` at runtime using Module Federation
+- `spa-guest-x`: [CRA](https://create-react-app.dev/) apps that expose some of their code at runtime using Module Federation
 
-- `spa`: a [CRA](https://create-react-app.dev/) app
+> all the apps use [Craco](https://www.npmjs.com/package/@craco/craco) to override the Webpack configuration and tweak it as per your the project's preference. You can duplicate any of the apps to create more CRA based apps instead of creating new apps with CRA, to save some of the repeat work needed to wire common packages(as mentioned below). `spa` is not a micro-frontend.
+
+### Packages
 - `ui`: a stub React component library shared by `apps/spa` and can be used by other _apps_ you'll add in the future
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
