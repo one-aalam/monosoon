@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled, themeUno } from './stitches.config';
+import { styled, themeUno } from '../stitches.config';
 
 const StyledButton = styled('button', {
     backgroundColor: '$blue4',

@@ -13,16 +13,32 @@
     "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "lint": "eslint src/**/*.ts*",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
+    "@babel/core": "^7.18.5",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "babel-loader": "^8.2.5",
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tsconfig": "*",
     "tsup": "^6.1.2",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@radix-ui/colors": "^0.1.8",
+    "@stitches/react": "^1.2.8"
   }
 }
