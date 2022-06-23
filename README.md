@@ -21,6 +21,30 @@ This repo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package manager
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
+### Structure
+```js
+├── apps/
+│   └── app-x // your uniquely replicable apps
+├── packages/
+│   ├── eslint-config-custom // shareable ESLint configs
+│   ├── tsconfig // shareable Typescript configs
+│   └── ui/
+│       └── src/
+│           └── components/
+│               ├── Shell/
+│               │   ├── Shell.tsx
+│               │   ├── Shell.stories.mdx
+│               │   ├── Shell.spec.tsx
+│               │   ├── index.tsx
+│               │   └── ... // more files related to component
+│               ├── Button
+│               ├── Input
+│               └── ... // more components
+├── package.json
+├── turbo.json
+└── yarn.lock
+```
+
 ### Utilities
 
 This turborepo has some additional tools already setup for you:
@@ -29,7 +53,7 @@ This turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 - [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for `ui` package  testing
-- [Storybook](https://storybook.js.org/) for fast, component `ui` development in isolation
+- [Storybook](https://storybook.js.org/) for fast, component `ui` development in isolation ( WIP - React18 compat issues )
 
 ### Build
 
