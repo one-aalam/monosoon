@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { api } from './lib/api'
 
 import { Button } from 'ui';
 
@@ -9,19 +10,10 @@ function App() {
     const [usersLoading, setUsersLoading] = useState(true)
 
     useEffect(() => {
-       fetch(`${process.env.REACT_APP_API_URL || ''}/api/people`).
-       then(resp => {
-            if(!resp.ok) {
-                throw new Error(`HTTP error! Status: ${ resp.status }`)
-            }
-            return resp.json()
-       }).
-       then(
-            (json) => {
-                setUsers(json)
-                setUsersLoading(false)
-            }
-        )
+        api.get(`/api/people`).then(res => {
+            setUsers(res.data)
+            setUsersLoading(false)
+        });
     }, [])
 
   return (
