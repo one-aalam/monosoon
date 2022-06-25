@@ -17,6 +17,13 @@ const StyledButton = styled('button', {
     }
 });
 
-export const Button = () => {
-  return <StyledButton>Boop</StyledButton>;
+export interface ButtonProps {
+    size?: 'sm' | 'md' | 'lg',
+    children: React.ReactNode
+}
+
+export const Button = ({ size = 'sm', children }: ButtonProps) => {
+  return <StyledButton>{children}</StyledButton>;
 };
+
+Button.displayName = 'Button'
