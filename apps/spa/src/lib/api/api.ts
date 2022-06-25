@@ -15,3 +15,5 @@ export const api = axios.create({
     timeout: 3000,
     headers: {'X-Custom-Header': 'foobar'}
 });
+
+export type APICallStatus = 'IDLE' | 'PENDING' | 'SUCCESS' | 'ERROR'

@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { api } from './lib/api'
 
 import { Button } from 'ui';
+import { useApi } from 'utils'
+import { api } from './lib/api'
 
 function App() {
-    const [users, setUsers] = useState([])
-    const [usersLoading, setUsersLoading] = useState(true)
+    const {
+        exec: fetchUsers,
+        data: users,
+        isIdle,
+        isPending
+    } = useApi(() => api.get(`/api/people`).then(resp => resp.data))
 
     useEffect(() => {
-        api.get(`/api/people`).then(res => {
-            setUsers(res.data)
-            setUsersLoading(false)
-        });
-    }, [])
+        fetchUsers()
+    }, [] )
 
   return (
     <div className="App">
@@ -25,7 +27,7 @@ function App() {
         </p>
         <Button>Boop</Button>
         {
-            usersLoading ?
+            isIdle || isPending ?
                 <span>loading...</span> : users ?
                     JSON.stringify(users) : null
         }
