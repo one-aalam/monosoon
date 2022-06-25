@@ -28,6 +28,7 @@
     "@craco/craco": "^6.4.3",
     "eslint": "^8.17.0",
     "eslint-config-custom": "*",
+    "msw": "^0.42.3",
     "tsconfig": "*"
   },
   "browserslist": {
@@ -41,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
