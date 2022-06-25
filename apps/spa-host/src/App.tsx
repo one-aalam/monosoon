@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { Button } from 'ui';
+import { Button, Input } from 'ui';
 import { SharedFromOne, SharedFromTwo } from './remotes'
 
 function App() {
@@ -16,10 +16,12 @@ function App() {
         <React.Suspense fallback="loading">
             <SharedFromOne/>
         </React.Suspense>
+        {process.env.REACT_APP_THEME}
+        <Input />
         <React.Suspense fallback="loading">
             <SharedFromTwo/>
         </React.Suspense>
-        <Button/>
+        <Button>Boop</Button>
         <a
           className="App-link"
           href="https://reactjs.org"

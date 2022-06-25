@@ -53,7 +53,7 @@ This turborepo has some additional tools already setup for you:
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
 - [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for `ui` package  testing
-- [Storybook](https://storybook.js.org/) for fast, component `ui` development in isolation ( WIP - React18 compat issues )
+- [Storybook](https://storybook.js.org/) for fast, component `ui` development in isolation
 
 ### Build
 
